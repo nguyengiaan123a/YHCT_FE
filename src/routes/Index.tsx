@@ -4,6 +4,10 @@ import Index from '../pages/Index';
 import Login from '../pages/Login';
 import ProtectedRoute from './ProtectedRoute';
 import CTMenuManager from '../pages/CTMenuManager';
+import { Menu } from 'lucide-react';
+import MenuManager from '../pages/MenuManager';
+import RoleManager from '../pages/Role/RoleManager';
+import PermissonManager from '../pages/Role/PermissonManager';
 
 export const router = createBrowserRouter([
   {
@@ -26,6 +30,19 @@ export const router = createBrowserRouter([
         path: 'quan-ly-danh-muc-menu',
         element: <CTMenuManager />, // Nội dung Menu sẽ hiện ở Outlet
       },
+      {
+        path: 'quan-ly-menu',
+        element: <MenuManager />, // Nội dung Menu sẽ hiện ở Outlet
+      },
+         {
+        path: 'quan-ly-role',
+        element: <RoleManager />, // Nội dung Menu sẽ hiện ở Outlet
+      },
+         {
+        path: 'quan-ly-phan-quyen/:id/:name', // Đường dẫn có tham số :id
+        element: < PermissonManager/>, // Nội dung Menu sẽ hiện ở Outlet
+      },
+      
     ],
   },
   {

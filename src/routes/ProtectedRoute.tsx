@@ -55,7 +55,7 @@ const ProtectedRoute = () => {
         <div className="p-6">
           <div className="bg-blue-600 rounded-xl p-3 flex items-center justify-center gap-2 shadow-lg">
             <span className="text-2xl">🏥</span>
-            <span className="font-bold text-white text-lg tracking-tight">YHCT ADMIN</span>
+            <span className="font-bold text-white text-lg tracking-tight">MPHCARE</span>
           </div>
         </div>
 
@@ -69,13 +69,18 @@ const ProtectedRoute = () => {
 
           <Link to="/quan-ly-danh-muc-menu" className={`flex items-center gap-3 px-4 py-3 rounded-xl transition-all duration-200 font-medium ${activeClass('/quan-ly-danh-muc-menu')}`}>
             <span className="text-xl">🛠️</span> 
-            <span>Quản lý Menu</span>
+            <span>Quản lý danh mục Menu</span>
+          </Link>
+
+          <Link to="/quan-ly-menu" className={`flex items-center gap-3 px-4 py-3 rounded-xl transition-all duration-200 font-medium ${activeClass('/quan-ly-danh-muc-benh-nhan')}`}>
+            <span className="text-xl">🛠️</span> 
+            <span>Quản lý menu</span>
           </Link>
 
           {/* Bạn có thể thêm các mục khác như Bệnh nhân, Lịch khám ở đây */}
-          <Link to="/benh-nhan" className={`flex items-center gap-3 px-4 py-3 rounded-xl transition-all duration-200 font-medium ${activeClass('/benh-nhan')}`}>
+          <Link to="/quan-ly-role" className={`flex items-center gap-3 px-4 py-3 rounded-xl transition-all duration-200 font-medium ${activeClass('/benh-nhan')}`}>
             <span className="text-xl">👥</span> 
-            <span>Bệnh nhân</span>
+            <span>Quản lý quyền</span>
           </Link>
         </nav>
 
