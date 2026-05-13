@@ -49,7 +49,7 @@ const RoleManager: React.FC = () => {
   };
 const handleAssignPermission = (roleId: string,name: string) => {
     // Chuyển hướng sang trang permission kèm theo ID của Role
-    navigate(`/quan-ly-phan-quyen/${roleId}/${name}`);
+    navigate(`/quan-ly-role/${roleId}/${name}`);
   };
 
   useEffect(() => {

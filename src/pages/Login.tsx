@@ -23,17 +23,17 @@ export default function Login() {
 
       // Axios tự động parse JSON và lưu vào thuộc tính `data`
       const data = response.data;
+         if (data.success === true) {
 
-      if (data.success != 200) {
+        // Chuyển hướng người dùng vào trang trong tại đây
+        window.location.href = '/trang-chu';
+        
+      }else {
         setErrorMessage(data.message );
       }
    
       
-      if (data.success === 200) {
-        alert('Đăng nhập thành công!');
-        // Chuyển hướng người dùng vào trang trong tại đây
-        window.location.href = '/trang-chu';
-      }
+   
 
     } catch (error: any) {
       // Axios sẽ tự động throw error nếu HTTP status code không nằm trong khoảng 2xx
